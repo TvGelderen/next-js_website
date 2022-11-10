@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Hero from '../components/Hero'
 import Slider from '../components/Slider'
+import Locations from '../components/Locations'
 
 import { SliderData } from '../components/SliderData'
 
@@ -18,6 +19,7 @@ export default function Home() {
         message="The beauty of nature captured in a selection of photographs."
       />
       <Slider images={SliderData} />
+      <Locations />
     </div>
   )
 }

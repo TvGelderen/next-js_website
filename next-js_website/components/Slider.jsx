@@ -21,7 +21,7 @@ const Slider = ({ images }) => {
     return (
         <div id='gallery'>
             <h3 className='text-center'>Gallery</h3>
-            <div className='relative mt-5 max-w-[1240px] m-auto mb-[1000px]'>
+            <div className='relative mt-5 max-w-[1440px] m-auto mb-12'>
                 {images.map((slide, index) => {
                     return (
                         <div
@@ -32,8 +32,13 @@ const Slider = ({ images }) => {
                         >
                             <BsChevronCompactLeft 
                                 size={60}
-                                className="absolute top-[50%] left-[24px] text-white cursor-pointer select-none z-[5]"
+                                className="absolute top-[45%] left-[24px] text-white cursor-pointer select-none z-[5]"
                                 onClick={previousSlide} 
+                            />
+                            <BsChevronCompactRight 
+                                size={60}
+                                className="absolute top-[45%] right-[24px] text-white cursor-pointer select-none z-[5]"
+                                onClick={nextSlide}
                             />
                             {index === current && (
                               <Image 
@@ -41,13 +46,8 @@ const Slider = ({ images }) => {
                                 alt={slide.location}
                                 width='1080'
                                 height='400'
-                                className='object-cover w-[1440px] max-h-[250px] sm:max-h-[330px] md:max-h-[450px] lg:max-h-[600px]'
+                                className='object-cover w-[1440px] max-h-[250px] sm:max-h-[330px] md:max-h-[450px] lg:max-h-[630px]'
                               />)}
-                            <BsChevronCompactRight 
-                                size={60}
-                                className="absolute top-[50%] right-[24px] text-white cursor-pointer select-none z-[5]"
-                                onClick={nextSlide}
-                            />
                         </div>
                     );
                 })}
