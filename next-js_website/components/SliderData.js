@@ -11,7 +11,8 @@ export const SliderData = [
     },
     {
         image: 'https://images.unsplash.com/photo-1455156218388-5e61b526818b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
-        country: "USA"
+        country: "USA",
+        location: "Unknown"
     },
     {
         image: 'https://images.unsplash.com/photo-1478772157037-9eaf7667d225?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80',
