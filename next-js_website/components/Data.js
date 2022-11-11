@@ -55,3 +55,51 @@ export const SliderData = [
         location: "Grand Tetons National Park"
     }
 ];
+
+export const LocationData = [
+    {
+        name: "Grand Canyon National Park",
+        location: "Arizona, United States",
+        coordinates: {lat: 36.201940, lng: -112.029087}
+    },
+    {
+        name: "Horseshoe Bend - Arizona",
+        location: "Arizona, United States",
+        coordinates: {lat: 36.879918, lng: -111.510362}
+    },
+    {
+        name: "Yosemite Valley",
+        location: "California, United States",
+        coordinates: {lat: 37.738563, lng: -119.566551}
+    },
+    {
+        name: "Sequoia National Park",
+        location: "California, United States",
+        coordinates: {lat: 36.494623, lng: -118.511624}
+    },
+    {
+        name: "Zion National Park",
+        location: "Utah, United States",
+        coordinates: {lat: 37.284293, lng: -113.010596}
+    },
+    {
+        name: "Kenai Fjords",
+        location: "Alaska, United States",
+        coordinates: {lat: 59.713241, lng: -150.071506}
+    },
+    {
+        name: "Smith Rock State Park",
+        location: "Oregon, United States",
+        coordinates: {lat: 44.367762, lng: -121.140259}
+    },
+    {
+        name: "Garden of the Gods",
+        location: "Colorado, United States",
+        coordinates: {lat: 38.877012, lng: -104.880307}
+    },
+    {
+        name: "Grand Tetons National Park",
+        location: "Wyoming, United States",
+        coordinates: {lat: 43.794684, lng: -110.684563}
+    },
+];

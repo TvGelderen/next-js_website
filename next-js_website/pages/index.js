@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Hero from '../components/Hero'
-import Slider from '../components/Slider'
+import Gallery from '../components/Gallery'
 import Locations from '../components/Locations'
-
-import { SliderData } from '../components/SliderData'
 
 export default function Home() {
   return (
@@ -18,7 +15,7 @@ export default function Home() {
         heading="Nature's Beauty" 
         message="The beauty of nature captured in a selection of photographs."
       />
-      <Slider images={SliderData} />
+      <Gallery />
       <Locations />
     </div>
   )
