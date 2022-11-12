@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <div 
-          className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+          className={`fixed left-0 top-0 w-full z-10 ease-in duration-300 ${textColor !== 'white' ? "shadow-2xl" : ""}`}
           style={{ backgroundColor: `${color}` }}  
         >
             <div className="max-w-[1440px] m-auto flex justify-between items-center p-4 text-white">

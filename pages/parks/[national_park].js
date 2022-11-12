@@ -1,4 +1,7 @@
+import { useMemo, useState } from 'react';
 import Head from 'next/head'
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+
 import Hero from '../../components/Hero'
 import Slider from '../../components/Slider'
 import Collage from '../../components/Collages'
@@ -11,9 +14,16 @@ export default function NationalPark() {
   const { national_park } = router.query
 
   const location = LocationData.find(loc => loc.name === national_park);
-  const images = SliderData.filter(img => img.location === location.name);
+  const images = SliderData.filter(img => img.location === national_park);
 
-  console.log(images)
+  if (location === undefined || images === undefined)
+    return null
+
+  const { isLoaded } = useLoadScript({
+      googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  });
+
+  const center = useMemo(() => (location.coordinates));
 
   return (
     <div>
@@ -34,6 +44,19 @@ export default function NationalPark() {
       <div className='mb-12 max-w-[1440px] m-auto'>
         <h3 className='text-center'>Collage</h3>
         <Collage images={images} />
+      </div>
+        <div className='mb-12 max-w-[1240px] m-auto'>
+          <h3 className='text-center'>Map</h3>
+          <div className="mt-5 shadow-2xl">
+            {!isLoaded ? <h1>Loading....</h1> :
+            <GoogleMap 
+                zoom={7} 
+                center={center}
+                mapContainerClassName="map-class"
+            >
+              <Marker position={location.coordinates} />
+            </GoogleMap>}
+        </div>
       </div>
     </div>
   )

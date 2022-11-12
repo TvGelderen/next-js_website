@@ -346,7 +346,7 @@ export const LocationData = [
         name: "Grand Canyon National Park",
         state: "Arizona",
         descripton: "Grand Canyon",
-        coordinates: {lat: 36.201940, lng: -112.029087}
+        coordinates: {lat: 36.098904, lng: -112.112513}
     },
     {
         name: "Yosemite National Park",
