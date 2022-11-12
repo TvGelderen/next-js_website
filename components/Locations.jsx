@@ -4,11 +4,11 @@ import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { LocationData, SliderData }  from "./Data";
 
 import { AiOutlineClose } from 'react-icons/ai'
-import Image from "next/image";
 import Slider from "./Slider";
+import Link from "next/link";
 
 const Locations = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const [location, setLocation] = useState(LocationData[0]);
 
     const { isLoaded } = useLoadScript({
@@ -25,7 +25,7 @@ const Locations = () => {
     return (
         <div className="mb-12">
             <h3 className="text-center">Locations</h3>
-            <div className="max-w-[1240px] m-auto mt-5">
+            <div className="max-w-[1240px] m-auto mt-5 shadow-2xl">
                 {!isLoaded ? <h1>Loading....</h1> :
                 <GoogleMap 
                     zoom={3} 
@@ -41,19 +41,32 @@ const Locations = () => {
                 </GoogleMap>}
             </div>
             {open && (
-                <div className="fixed z-[10] left-0 top-0 w-full h-full bg-black/60 justify-center flex">
-                    <div className="max-w-[1000px] w-[95%] md:w-[80%] lg:w-[70%] fixed left-auto top-[30%] bg-white shadow-lg p-4">
+                <div 
+                  className="fixed z-[10] left-0 top-0 w-full h-full bg-black/60 justify-center flex" 
+                  onClick={() => setOpen(false)} 
+                >
+                    <div 
+                      className="max-w-[1000px] w-[95%] md:w-[80%] lg:w-[70%] fixed top-[30%] bg-white shadow-lg p-4" 
+                      onClick={(event) => event.stopPropagation()} 
+                      >
                         <div className="flex justify-between pb-2 border-b-4 border-gray-300">
                             <div>
                                 <h3>{location.name}</h3>
-                                <p className="pt-1">{location.location}</p>
+                                <p className="pt-1">{location.state}</p>
                             </div>
                             <div className="cursor-pointer" onClick={() => setOpen(false)} >
                                 <AiOutlineClose size={30}/>
                             </div>
                         </div>
+                        {location.descripton !== "" && (
+                            <div className="pt-4">
+                                <p>{location.descripton}</p>
+                            </div>
+                        )}
                         <div className="pt-4">
-                            <Slider images={SliderData.filter(slide => slide.location === location.name)} />
+                            <Link href={`parks/${location.name}`}>
+                                <Slider images={SliderData.filter(slide => slide.location === location.name)} />
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -36,7 +36,7 @@ const Navbar = () => {
         >
             <div className="max-w-[1440px] m-auto flex justify-between items-center p-4 text-white">
                 <Link href='/'>
-                    <h1 className="text-4xl font-bold" style={{ color: `${textColor}` }}>Nature</h1>
+                    <h1 className="text-4xl font-bold" style={{ color: `${textColor}` }}>National Parks</h1>
                 </Link>
                 <ul className="hidden sm:flex" style={{ color: `${textColor}` }}>
                     <li className="p-4">

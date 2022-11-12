@@ -7,10 +7,6 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
-.custom-bg-img {
-  background-image: url("https://wallpaperaccess.com/full/31189.jpg");
-}
-
 .map-class {
   width: 100%;
   height: 50vh;
