@@ -1,8 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
-
 import { LocationData, SliderData }  from "./Data";
-
 import { AiOutlineClose } from 'react-icons/ai'
 import Slider from "./Slider";
 import Link from "next/link";
@@ -23,7 +21,7 @@ const Map = () => {
     };
 
     return (
-        <div id="map" className="mb-12">
+        <div id="map" className="mt-12">
             <h3 className="text-center">Map</h3>
             <div className="max-w-[1240px] m-auto mt-5 shadow-2xl">
                 {!isLoaded ? <h1>Loading....</h1> :
@@ -63,7 +61,7 @@ const Map = () => {
                                 <p>{location.descripton}</p>
                             </div>
                         )}
-                        <div className="pt-4">
+                        <div>
                             <Link href={`parks/${location.name}`}>
                                 <Slider images={SliderData.filter(slide => slide.location === location.name)} />
                             </Link>

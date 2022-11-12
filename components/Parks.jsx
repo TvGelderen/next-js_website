@@ -6,7 +6,7 @@ import { LocationData, SliderData } from "./Data";
 
 const Parks = () => {
     return (
-        <div id="parks" className="mb-12 max-w-[850px] m-auto">
+        <div id="parks" className="mt-12 max-w-[850px] m-auto">
             <h3 className="text-center">Parks</h3>
             <div>
                 {LocationData.map(location => {
