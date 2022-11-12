@@ -7,7 +7,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import Slider from "./Slider";
 import Link from "next/link";
 
-const Locations = () => {
+const Map = () => {
     const [open, setOpen] = useState(false);
     const [location, setLocation] = useState(LocationData[0]);
 
@@ -23,8 +23,8 @@ const Locations = () => {
     };
 
     return (
-        <div className="mb-12">
-            <h3 className="text-center">Locations</h3>
+        <div id="locations" className="mb-12">
+            <h3 className="text-center">Map</h3>
             <div className="max-w-[1240px] m-auto mt-5 shadow-2xl">
                 {!isLoaded ? <h1>Loading....</h1> :
                 <GoogleMap 
@@ -75,4 +75,4 @@ const Locations = () => {
     );
 }
 
-export default Locations;
+export default Map;

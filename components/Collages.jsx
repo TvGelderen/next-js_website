@@ -14,16 +14,16 @@ const Collage = ({ images }) => {
     }
 
     return (
-        <div className="mt-5">
+        <div className="mt-5 mx-5">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                 {images.map((img, idx) => (
-                    <div key={idx}>
+                    <div key={idx} className="hover:scale-110 ease-in duration-300 cursor-pointer">
                         <Image
                           src={img.image}
                           alt={img.location}
                           width='500'
                           height='700'
-                          className="object-cover h-[150px] md:h-[200px] lg:h-[250px]"
+                          className="object-cover h-[150px] md:h-[200px] lg:h-[250px] "
                           onClick={() => handleImageClick(idx)}
                         />
                     </div>

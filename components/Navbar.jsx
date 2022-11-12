@@ -9,7 +9,7 @@ import { BsPinMap } from 'react-icons/bs';
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const [color, setColor] = useState('transparent');
-    const [textColor, setTextColor] = useState('black');
+    const [textColor, setTextColor] = useState('white');
 
     const handleOpen = () => {
         setOpen(!open);
@@ -43,10 +43,13 @@ const Navbar = () => {
                         <Link href='/'>Home</Link>
                     </li>
                     <li className="p-4">
-                        <Link href='/#gallery'>Gallery</Link>
+                        <Link href='#gallery'>Gallery</Link>
                     </li>
                     <li className="p-4">
-                        <Link href='/#locations'>Locations</Link>
+                        <Link href='/#map'>Map</Link>
+                    </li>
+                    <li className="p-4">
+                        <Link href='/#parks'>Parks</Link>
                     </li>
                 </ul>
 
@@ -63,6 +66,9 @@ const Navbar = () => {
                         </li>
                         <li className="p-4 text-3xl hover:text-gray-500">
                             <Link href='/#locations'>Locations</Link>
+                        </li>
+                        <li className="p-4 text-3xl hover:text-gray-500">
+                            <Link href='/#parks'>Parks</Link>
                         </li>
                     </ul>
                 </div>

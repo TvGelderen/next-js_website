@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Hero from '../components/Hero'
 import Gallery from '../components/Gallery'
-import Locations from '../components/Locations'
+import Map from '../components/Map'
+import Parks from '../components/Parks'
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
         background="https://wallpaperaccess.com/full/31189.jpg"
       />
       <Gallery />
-      <Locations />
+      <Map />
+      <Parks />
     </div>
   )
 }
