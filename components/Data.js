@@ -24,20 +24,12 @@ export const SliderData = [
         location: "Yosemite National Park"
     },
     {
-        image: 'https://images.unsplash.com/photo-1657574436025-29e990b94bea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
-        location: "Garden of the Gods"
-    },
-    {
         image: 'https://images.unsplash.com/photo-1545394734-b4140a8cfa9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
         location: "Grand Teton National Park"
     },
     {
         image: 'https://images.unsplash.com/photo-1626175853745-028c0bb7981b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80',
         location: "Denali National Park and Preserve"
-    },
-    {
-        image: 'https://images.unsplash.com/photo-1633712152537-57ae53e6c8f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
-        location: "Garden of the Gods"
     },
     {
         image: 'https://images.unsplash.com/photo-1563678197518-a73a983d6c5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
@@ -344,126 +336,140 @@ export const SliderData = [
 export const LocationData = [
     {
         name: "Grand Canyon National Park",
+        code: "grca",
         state: "Arizona",
         descripton: "Grand Canyon",
         coordinates: {lat: 36.098904, lng: -112.112513}
     },
     {
         name: "Yosemite National Park",
+        code: "yose",
         state: "California",
         descripton: "",
         coordinates: {lat: 37.738563, lng: -119.566551}
     },
     {
         name: "Sequoia National Park",
+        code: "seki",
         state: "California",
         descripton: "",
         coordinates: {lat: 36.494623, lng: -118.511624}
     },
     {
         name: "Zion National Park",
+        code: "zion",
         state: "Utah",
         descripton: "",
         coordinates: {lat: 37.284293, lng: -113.010596}
     },
     {
         name: "Kenai Fjords National Park",
+        code: "kefj",
         state: "Alaska",
         descripton: "",
         coordinates: {lat: 59.713241, lng: -150.071506}
     },
     {
-        name: "Garden of the Gods",
-        state: "Colorado",
-        descripton: "",
-        coordinates: {lat: 38.877012, lng: -104.880307}
-    },
-    {
         name: "Grand Teton National Park",
+        code: "grte",
         state: "Wyoming",
         descripton: "",
         coordinates: {lat: 43.794684, lng: -110.684563}
     },
     {
         name: "Denali National Park and Preserve",
+        code: "dena",
         state: "Alaska",
         description: "",
         coordinates: {lat: 63.068256, lng: -151.006679}
     },
     {
         name: "Acadia National Park",
+        code: "acad",
         state: "Maine",
         description: "",
         coordinates: {lat: 44.337801, lng: -68.273798}
     },
     {
         name: "Arches National Park",
+        code: "arch",
         state: "Utah",
         description: "",
         coordinates: {lat: 38.720572, lng: -109.581129}
     },
     {
         name: "Glacier National Park",
+        code: "glac",
         state: "Montana",
         description: "",
         coordinates: {lat: 48.636694, lng: -113.863457}
     },
     {
         name: "Joshua Tree National Park",
+        code: "jotr",
         state: "California",
         description: "",
         coordinates: {lat: 33.866602, lng: -115.900537}
     },
     {
         name: "Yellowstone National Park",
+        code: "yell",
         state: "Wyoming",
         description: "",
         coordinates: {lat: 44.428805, lng: -110.609890}
     },
     {
         name: "Everglades National Park",
+        code: "ever",
         state: "Florida",
         description: "",
         coordinates: {lat: 25.314632, lng: -80.883757}
     },
     {
         name: "Shenandoah National Park",
+        code: "shen",
         state: "Virginia",
         description: "",
         coordinates: {lat: 38.483572, lng: -78.445471}
     },
     {
         name: "North Cascades National Park",
+        code: "noca",
         state: "Washington",
         description: "",
         coordinates: {lat: 48.756147, lng: -121.298056}
     },
     {
         name: "Olympic National Park",
+        code: "olym",
         state: "Washington",
         description: "",
         coordinates: {lat: 47.765704, lng: -123.595723}
     },
     {
         name: "Mt Rainier National Park",
+        code: "mora",
         state: "Washington",
         description: "",
         coordinates: {lat: 46.842675, lng: -121.736940}
     },
     {
         name: "Big Bend National Park",
+        code: "bibe",
         state: "Texas",
         description: "",
         coordinates: {lat: 29.258109, lng: -103.285549}
     },
     {
         name: "Guadalupe Mountains National Park",
+        code: "gumo",
         state: "Texas",
         description: "",
         coordinates: {lat: 31.924866, lng: -104.881838}
     },
     {
         name: "Great Smoky Mountains National Park",
+        code: "grsm",
         state: "Tennessee",
         description: "",
         coordinates: {lat: 35.592222, lng: -83.552572}

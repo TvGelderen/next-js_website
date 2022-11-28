@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
     "@react-google-maps/api": "^2.16.1",
     "next": "13.0.2",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0"
   },

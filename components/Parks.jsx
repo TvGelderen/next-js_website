@@ -13,7 +13,7 @@ const Parks = () => {
                     const image = SliderData.find(img => img.location === location.name)
 
                     return (
-                        <div className="flex justify-center m-4">
+                        <div key={location.name} className="flex justify-center m-4">
                             <Link href={`parks/${location.name}`}>
                                 <h4 className="text-center">{location.name}</h4>
                                 <Image

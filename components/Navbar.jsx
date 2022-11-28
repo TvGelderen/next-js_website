@@ -59,16 +59,16 @@ const Navbar = () => {
                 <div className={`sm:hidden absolute top-0 ${open ? "left-0" : "left-[-100%]" } right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300`}>
                     <ul>
                         <li className="p-4 text-3xl hover:text-gray-500">
-                            <Link href='/'>Home</Link>
+                            <Link href='/' onClick={handleOpen}>Home</Link>
                         </li>
                         <li className="p-4 text-3xl hover:text-gray-500">
-                            <Link href='/#gallery'>Gallery</Link>
+                            <Link href='/#gallery' onClick={handleOpen}>Gallery</Link>
                         </li>
                         <li className="p-4 text-3xl hover:text-gray-500">
-                            <Link href='/#locations'>Locations</Link>
+                            <Link href='/#locations' onClick={handleOpen}>Locations</Link>
                         </li>
                         <li className="p-4 text-3xl hover:text-gray-500">
-                            <Link href='/#parks'>Parks</Link>
+                            <Link href='/#parks' onClick={handleOpen}>Parks</Link>
                         </li>
                     </ul>
                 </div>
