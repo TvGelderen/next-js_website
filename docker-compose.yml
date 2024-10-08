@@ -6,9 +6,9 @@ services:
     container_name: us-national-parks
     ports:
       - "3030:3030"
-#     networks:
-#       - nginx_default
-#
-# networks:
-#   nginx_default:
-#     external: true
+    networks:
+      - nginx_default
+
+networks:
+  nginx_default:
+    external: true
