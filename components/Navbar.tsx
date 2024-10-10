@@ -34,7 +34,7 @@ const Navbar = () => {
 			}`}
 			style={{ backgroundColor: `${color}` }}
 		>
-			<div className="max-w-[1440px] m-auto flex justify-between items-center p-4 text-white">
+			<div className="max-w-[1440px] m-auto flex justify-between items-center p-2 text-white">
 				<Link href="/">
 					<h1
 						className="text-4xl font-bold"

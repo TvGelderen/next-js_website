@@ -23,7 +23,7 @@ const Map = () => {
 	};
 
 	return (
-		<div id="map" className="mt-12">
+		<div id="map" className="pt-[90px]">
 			<h3 className="text-center">Map</h3>
 			<div className="max-w-[1240px] m-auto mt-5 shadow-2xl">
 				{!isLoaded ? (

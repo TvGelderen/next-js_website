@@ -37,18 +37,23 @@ const Collage = ({ images, location }: CollageProps) => {
 		<div className="mt-5 mx-5">
 			<div className="grid grid-cols-2 md:grid-cols-3 gap-2">
 				{images.map((img, idx) => (
-					<div
-						key={idx}
-						className="hover:scale-105 ease-in duration-300 cursor-pointer"
-					>
+					<div key={idx} className="relative group cursor-pointer">
 						<Image
 							src={img.url}
 							alt={img.altText}
 							width={500}
 							height={700}
-							className="object-cover h-[150px] md:h-[200px] lg:h-[250px] rounded-lg shadow-md"
+							className="object-cover h-[200px] md:h-[250px] lg:h-[300px] rounded-lg shadow-md"
 							onClick={() => handleImageClick(idx)}
 						/>
+						<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 rounded-lg flex flex-col justify-end p-4">
+							<h4 className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+								{img.title}
+							</h4>
+							<p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+								Credit: {img.credit}
+							</p>
+						</div>
 					</div>
 				))}
 			</div>

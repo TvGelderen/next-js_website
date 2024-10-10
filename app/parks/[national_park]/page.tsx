@@ -57,64 +57,87 @@ export default function NationalPark({
 			</div>
 
 			{parkData !== undefined && (
-				<>
-					<div className="mb-12 max-w-[700px] px-4 m-auto">
-						<h3 className="text-center pb-4">Description</h3>
-						<p className="font-semibold">General</p>
-						<p>{parkData.description}</p>
-						<br />
-						<p className="font-semibold">Weather</p>
-						<p>{parkData.weatherInfo}</p>
-						<br />
-						<a
-							target="_blank"
-							href={parkData.url}
-							className="text-blue-600 underline"
-						>
-							More information
-						</a>
+				<div className="mb-12 max-w-[800px] mx-auto px-6">
+					<h2 className="text-3xl font-bold text-center mb-8">
+						Park Information
+					</h2>
+
+					<div className="bg-white shadow-lg rounded-lg overflow-hidden">
+						<div className="p-6">
+							<h3 className="text-2xl font-semibold mb-4">
+								About {location.name}
+							</h3>
+							<p className="mb-4">{parkData.description}</p>
+
+							<h4 className="text-xl font-semibold mb-2">
+								Weather
+							</h4>
+							<p className="mb-4">{parkData.weatherInfo}</p>
+
+							<a
+								href={parkData.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
+							>
+								More Information
+							</a>
+						</div>
 					</div>
 
-					<div className="mb-12 max-w-[900px] m-auto">
-						<h3 className="text-center">Opening hours</h3>
-						{parkData.operatingHours.map((place) => (
-							<div key={place.name} className="px-4 py-2">
-								<p className="font-semibold pr-4">
-									{place.name}
-								</p>
-								<p>{place.description}</p>
-							</div>
-						))}
+					<div className="mt-8 bg-white shadow-lg rounded-lg overflow-hidden">
+						<div className="p-6">
+							<h3 className="text-2xl font-semibold mb-4">
+								Opening Hours
+							</h3>
+							{parkData.operatingHours.map((place) => (
+								<div
+									key={place.name}
+									className="mb-4 last:mb-0"
+								>
+									<h4 className="text-lg font-semibold">
+										{place.name}
+									</h4>
+									<p className="mt-1">{place.description}</p>
+								</div>
+							))}
+						</div>
 					</div>
 
-					<div className="mb-12 max-w-[700px] m-auto px-4">
-						<h3 className="text-center">Price information</h3>
-						<h4>Entrance fees</h4>
-						{parkData.entranceFees.map((fee, index) => (
-							<div key={index} className="flex py-2">
-								<p className="font-semibold pr-4">
-									${fee.cost}
-								</p>
-								<p>
-									{fee.description === ""
-										? fee.title
-										: fee.description}
-								</p>
-							</div>
-						))}
-						<h4>Entrance passes</h4>
-						{parkData.entrancePasses.map((pass, index) => (
-							<div key={index} className="flex py-2">
-								<p className="font-semibold pr-4">
-									{pass.cost === "0.00"
-										? "Free"
-										: `$${pass.cost}`}
-								</p>
-								<p>{pass.description}</p>
-							</div>
-						))}
+					<div className="mt-8 bg-white shadow-lg rounded-lg overflow-hidden">
+						<div className="p-6">
+							<h3 className="text-2xl font-semibold mb-4">
+								Entrance Fees & Passes
+							</h3>
+
+							<h4 className="text-xl font-semibold mb-2">
+								Entrance Fees
+							</h4>
+							{parkData.entranceFees.map((fee, index) => (
+								<div key={index} className="mb-2 last:mb-4">
+									<span className="font-semibold">
+										${fee.cost}
+									</span>{" "}
+									- {fee.description || fee.title}
+								</div>
+							))}
+
+							<h4 className="text-xl font-semibold mb-2">
+								Entrance Passes
+							</h4>
+							{parkData.entrancePasses.map((pass, index) => (
+								<div key={index} className="mb-2 last:mb-0">
+									<span className="font-semibold">
+										{pass.cost === "0.00"
+											? "Free"
+											: `$${pass.cost}`}
+									</span>{" "}
+									- {pass.description}
+								</div>
+							))}
+						</div>
 					</div>
-				</>
+				</div>
 			)}
 
 			<div className="mb-12 max-w-[1240px] m-auto">

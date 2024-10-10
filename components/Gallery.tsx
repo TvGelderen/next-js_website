@@ -5,7 +5,7 @@ import { SliderData } from "./Data";
 
 const Gallery = () => {
 	return (
-		<div id="gallery" className="mt-12">
+		<div id="gallery" className="pt-[90px]">
 			<h3 className="text-center">Gallery</h3>
 			<div className="max-w-[1440px] m-auto h-[250px] sm:h-[330px] md:h-[450px] lg:h-[630px] shadow-2xl">
 				<Slider
