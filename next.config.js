@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	reactStrictMode: true,
-	swcMinify: true,
-	output: "standalone",
-	images: {
-		domains: ["images.unsplash.com", "www.nps.gov"],
-	},
+  reactStrictMode: true,
+  output: "standalone",
+  images: {
+    remotePatterns: [
+      { hostname: "images.unsplash.com" },
+      { hostname: "www.nps.gov" },
+    ],
+  },
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 module.exports = nextConfig;

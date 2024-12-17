@@ -26,6 +26,9 @@ const Collage = ({ images, location }: CollageProps) => {
 	const [open, setOpen] = useState<boolean>(false);
 	const [index, setIndex] = useState<number>(0);
 	const [clickedIndex, setClickedIndex] = useState<number>(0);
+	const [imageErrors, setImageErrors] = useState<{ [key: number]: boolean }>(
+		{}
+	);
 
 	const handleImageClick = (idx: number) => {
 		setClickedIndex(idx);
@@ -33,19 +36,39 @@ const Collage = ({ images, location }: CollageProps) => {
 		setOpen(true);
 	};
 
+	const handleImageError = (idx: number) => {
+		setImageErrors((prev) => ({
+			...prev,
+			[idx]: true,
+		}));
+	};
+
 	return (
 		<div className="mt-5 mx-5">
 			<div className="grid grid-cols-2 md:grid-cols-3 gap-2">
 				{images.map((img, idx) => (
-					<div key={idx} className="relative group cursor-pointer">
-						<Image
-							src={img.url}
-							alt={img.altText}
-							width={500}
-							height={700}
-							className="object-cover h-[200px] md:h-[250px] lg:h-[300px] rounded-lg shadow-md"
-							onClick={() => handleImageClick(idx)}
-						/>
+					<div
+						key={idx}
+						className="relative group cursor-pointer"
+						onClick={() => handleImageClick(idx)}
+					>
+						{imageErrors[idx] ? (
+							<div className="bg-gray-200 h-[200px] md:h-[250px] lg:h-[300px] rounded-lg shadow-md flex items-center justify-center">
+								<p className="text-gray-500 text-sm text-center p-4">
+									Image not available
+								</p>
+							</div>
+						) : (
+							<Image
+								src={img.url}
+								alt={img.altText}
+								width={500}
+								height={700}
+								loading="lazy"
+								className="object-cover h-[200px] md:h-[250px] lg:h-[300px] rounded-lg shadow-md"
+								onError={() => handleImageError(idx)}
+							/>
+						)}
 						<div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 rounded-lg flex flex-col justify-end p-4">
 							<h4 className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 								{img.title}
